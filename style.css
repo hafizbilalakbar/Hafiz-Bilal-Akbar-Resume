@@ -1,0 +1,365 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: linear-gradient(92deg, #191e23, #0c0c0c);
+    color: #333;
+    width: 100%;
+    height: 100%;
+}
+
+/* Particles Background Styling */
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.main-cv-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cv-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    /* background-color: #ffffff; */
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transform: scale(0.96);
+    /* z-index: 1;  */
+}
+
+.left-column,
+.right-column {
+    padding: 40px 30px;
+}
+
+.left-column {
+    width: 35%;
+    background-color: #021a36;
+    color: #ecf0f1;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-info h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 34px;
+    font-weight: 700;
+    color: #ffffff;
+} 
+
+.profile-info .job-title {
+    font-size: 22px;
+    color: #bdc3c7;
+    margin-bottom: 30px;
+    font-weight: 600;
+    font-family: "Playfair Display", serif;
+}
+
+/* Section Headings */
+.section h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 26px;
+    margin: 12px 0;
+    position: relative;
+    padding-bottom: 10px;
+    font-weight: 700;
+}
+
+.left-column .section h2 {
+    color: #fff;
+}
+
+.right-column .section h2 {
+    color: #2c3e50;
+}
+
+/* Decorative Lines */
+.section h2::after {
+    content: "";
+    display: block;
+    height: 1px;
+    background-color: #b8b8b8;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.section-item,
+.section.workflow-tools ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.section-item p,
+.section.workflow-tools ul li{
+    line-height: 1.5;
+    color: #edededf7;
+    font-size: 16px;
+}
+
+.section.contact i,
+.section.skills i,
+.section.workflow-tools i {
+    margin-right: 10px;
+    color: #ffffff;
+}
+
+.section.skills ul,
+.section.workflow-tools ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.section.skills ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 16px;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: "Playfair Display", serif;
+    color: #edededf7;
+}
+
+.section.workflow-tools ul li {
+    position: relative;
+    padding-left: 20px;
+}
+
+.section.workflow-tools ul li::before {
+    content: "\f00c";
+    /* Font Awesome check icon */
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: #ffffff;
+}
+
+.section.skills ul li::before {
+    content: none;
+}
+
+/* Hover Link Animation */
+a {
+    color: #ecf0f1;
+    text-decoration: none;
+    position: relative;
+}
+
+a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #1abc9c;
+    left: 0;
+    bottom: -2px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease-in-out;
+}
+
+a:hover::after {
+    transform: scaleX(1);
+}
+
+a:hover {
+    color: #1abc9c;
+}
+
+.right-column {
+    width: 65%;
+    background-color: #ffffff;
+    color: #333333;
+}
+
+.section.summary p {
+    font-size: 17px;
+    line-height: 1.4;
+    color: #4d4d4d;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+/* Work Experience Styling */
+.work-experience .job {
+    margin-bottom: 25px;
+}
+
+.work-experience .job h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.work-experience .job h3,
+.work-experience .job p strong{
+    color: #2980b9;
+}
+
+.job-desc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 84%;
+    gap: 8px;
+}
+
+.work-experience .job p {
+    font-size: 16px;
+    color: #3d3d3d;
+    font-family: 'Roboto';
+    font-weight: 500;
+}
+
+.work-experience .job ul {
+    list-style-type: disc;
+    padding-top: 10px;
+    padding-left: 20px;
+    width: 92%;
+}
+
+.work-experience .job ul li {
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: 'Roboto', sans-serif;
+}
+
+.work-experience .job ul li b {
+    font-size: 17px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Education Section Styling */
+.education .timeline {
+    position: relative;
+    margin: 0px;
+    padding: 10px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 28px;
+    top: 0;
+    bottom: 12px;
+    width: 3px;
+    background: #2980b9;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-icon {
+    flex: 0 0 40px;
+    background: #2980b9;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    margin-top: 0;
+    font-size: 18px;
+    z-index: 1;
+}
+
+.timeline-content {
+    flex: 1;
+    padding-bottom: 10px;
+}
+
+.timeline-content h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: #2c3e50;
+}
+
+.timeline-content p {
+    font-size: 14px;
+    color: #3d3d3d;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .cv-container {
+        flex-direction: column;
+    }
+
+    .left-column,
+    .right-column {
+        width: 100%;
+    }
+
+    .timeline::before {
+        left: 20px;
+    }
+
+    .timeline-item {
+        margin-left: 0;
+    }
+
+    .timeline-icon {
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .profile-info h1 {
+        font-size: 28px;
+    }
+
+    .profile-info .job-title {
+        font-size: 18px;
+    }
+
+    .section h2 {
+        font-size: 22px;
+    }
+
+    .work-experience .job h3 {
+        font-size: 22px;
+    }
+
+    .education .timeline {
+        margin-left: 20px;
+    }
+}
